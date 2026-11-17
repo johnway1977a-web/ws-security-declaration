@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>WS Badge Scanner — Test Only</title>
+<title>WS Badge Scanner — Scan Tuning V2</title>
 <style>
   :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#172338;background:#f3f6fa}
   *{box-sizing:border-box}body{margin:0;padding:24px 14px}main{max-width:600px;margin:auto}
@@ -22,10 +22,10 @@
 </head>
 <body>
 <main>
-  <h1>WestJet Badge Scanner</h1>
+  <h1>WestJet Badge Scanner — V2</h1>
   <p class="note"><strong>QR scanning test only.</strong> No passwords, RAIC records, or declarations are collected.</p>
   <section class="card">
-    <p class="note">Tap <strong>Start camera</strong>, allow camera access, then scan your employee badge.</p>
+    <p class="note">Tap <strong>Start camera</strong>. Keep your badge in its sleeve, tilt it slightly to avoid glare, and hold the QR code steady about 10–20 cm from the phone. Move closer or farther if blurry.</p>
     <div class="buttons"><button id="start" type="button">Start camera</button><button id="stop" class="secondary" type="button" disabled>Stop camera</button></div>
     <div id="reader"></div>
     <p id="status" role="status" aria-live="polite">Ready to scan.</p>
@@ -83,9 +83,21 @@ async function startCamera(){
   starting=true;startBtn.disabled=true;setStatus('Requesting camera access...');
   try{
     scanner=new Html5Qrcode('reader',{formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE],verbose:false});
-    await scanner.start({facingMode:'environment'},{fps:10,qrbox:(w,h)=>{const side=Math.min(280,Math.floor(Math.min(w,h)*.8));return{width:side,height:side};}},scanned,()=>{});
+    // Scan the entire camera preview rather than a small central square.
+    // Request a sharper rear-camera stream when supported; fall back to defaults.
+    try {
+      await scanner.start(
+        {facingMode:'environment'},
+        {fps:15,videoConstraints:{facingMode:'environment',width:{ideal:1280},height:{ideal:720}}},
+        scanned,()=>{}
+      );
+    } catch (highResError) {
+      try { scanner.clear(); } catch (_) {}
+      scanner=new Html5Qrcode('reader',{formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE],verbose:false});
+      await scanner.start({facingMode:'environment'},{fps:15},scanned,()=>{});
+    }
     running=true;stopBtn.disabled=false;
-    if(accepted)await stopCamera();else setStatus('Camera ready. Hold the badge QR code in the square.');
+    if(accepted)await stopCamera();else setStatus('Camera ready. Keep the QR code steady and tilt the badge to reduce reflections.');
   }catch(e){setStatus('Camera could not start: '+String(e),'error');await stopCamera();}
   finally{starting=false;if(!running)startBtn.disabled=false;}
 }
