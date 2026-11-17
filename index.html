@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>WS Badge Scanner — Scan Tuning V2</title>
+<title>WS Badge Scanner — V3 Demo Login</title>
 <style>
   :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#172338;background:#f3f6fa}
   *{box-sizing:border-box}body{margin:0;padding:24px 14px}main{max-width:600px;margin:auto}
@@ -16,14 +16,21 @@
   #status.ok{background:#e7f6ec;color:#176c3c}#status.error{background:#fff0ef;color:#a32625}
   #result{background:#f5faf7;border:1px solid #c9ead7;border-radius:12px;padding:15px;margin-top:15px}
   #result[hidden]{display:none}#result h2{font-size:1.1rem;margin:0 0 12px;color:#176c3c}
+  #loginCard[hidden],#granted[hidden]{display:none}
+  label{display:block;font-weight:650;margin:12px 0 7px}
+  input[type=password]{width:100%;min-height:48px;padding:12px;border:1px solid #bac8d8;border-radius:10px;font:inherit}
+  .demo{background:#fff8e8;border:1px solid #f0d99d;padding:12px;border-radius:10px;color:#654900;line-height:1.45}
+  #loginStatus{padding:10px;margin-top:10px;border-radius:9px;background:#f0f4fa}
+  #loginStatus.error{background:#fff0ef;color:#a32625}
+  #granted{background:#e7f6ec;border:1px solid #a2d8b8;padding:13px;border-radius:12px;margin-top:12px;color:#176c3c}
   dl{display:grid;grid-template-columns:110px 1fr;gap:11px;margin:0}dt{color:#566273}dd{margin:0;font-weight:650;overflow-wrap:anywhere}
 </style>
 <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" defer></script>
 </head>
 <body>
 <main>
-  <h1>WestJet Badge Scanner — V2</h1>
-  <p class="note"><strong>QR scanning test only.</strong> No passwords, RAIC records, or declarations are collected.</p>
+  <h1>WestJet Badge Scanner — V3 Test Login</h1>
+  <p class="demo"><strong>PUBLIC DEMONSTRATION ONLY.</strong> Your badge QR will be decoded locally. The test password is not real authentication. Do not use actual passwords or RAIC information.</p>
   <section class="card">
     <p class="note">Tap <strong>Start camera</strong>. Keep your badge in its sleeve, tilt it slightly to avoid glare, and hold the QR code steady about 10–20 cm from the phone. Move closer or farther if blurry.</p>
     <div class="buttons"><button id="start" type="button">Start camera</button><button id="stop" class="secondary" type="button" disabled>Stop camera</button></div>
@@ -39,13 +46,45 @@
       </dl>
     </div>
   </section>
-  <p class="note">Privacy: Badge data is decoded locally in your browser and is not saved or sent to this website's server. The QR reader library loads from a third-party CDN. This public page is not an employee-authentication system.</p>
+  <section class="card" id="loginCard" hidden>
+    <h2>Step 2 — Test password</h2>
+    <p class="note">Badge recognized. Enter the <strong>fictional demo password</strong> below. This only tests the screen sequence; it does not verify your identity or authorize a declaration.</p>
+    <label for="demoPassword">Demo password</label>
+    <input id="demoPassword" type="password" autocomplete="off" placeholder="Enter fictional test password" />
+    <div class="buttons"><button id="checkPassword" type="button">Check demo password</button><button id="reset" type="button" class="secondary">Scan another badge</button></div>
+    <p id="loginStatus" role="status" aria-live="polite">Waiting for demo password.</p>
+    <div id="granted" hidden><strong>✓ Demo sequence complete</strong><p>Badge read + fictional password matched. No actual employee access has been granted.</p></div>
+  </section>
+  <p class="note">Privacy: Badge data is decoded locally in your browser and is not saved or sent to this website's server. The QR reader library loads from a third-party CDN. This public page has no employee database, credential service or RAIC lookup. The demonstration password is visible in the page source and is not secure.</p>
 </main>
 <script>
 const startBtn=document.getElementById('start');
 const stopBtn=document.getElementById('stop');
 const statusEl=document.getElementById('status');
 const resultEl=document.getElementById('result');
+const loginCard=document.getElementById('loginCard');
+const demoPasswordEl=document.getElementById('demoPassword');
+const loginStatusEl=document.getElementById('loginStatus');
+const grantedEl=document.getElementById('granted');
+// Public demonstration only: a common fictional password, NOT an authentication secret.
+const DEMO_PASSWORD='WS-Demo-2026!';
+let badgeRead=false;
+function clearDemo(){badgeRead=false;loginCard.hidden=true;demoPasswordEl.value='';grantedEl.hidden=true;loginStatusEl.textContent='Waiting for demo password.';loginStatusEl.className='';}
+document.getElementById('checkPassword').addEventListener('click',()=>{
+  if(!badgeRead)return;
+  if(demoPasswordEl.value===DEMO_PASSWORD){
+    grantedEl.hidden=false;
+    loginStatusEl.textContent='Demo password accepted (simulation only).';
+    loginStatusEl.className='';
+  }else{
+    grantedEl.hidden=true;
+    demoPasswordEl.value='';
+    loginStatusEl.textContent='Demo password did not match.';
+    loginStatusEl.className='error';
+  }
+});
+demoPasswordEl.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('checkPassword').click();});
+document.getElementById('reset').addEventListener('click',()=>startCamera());
 let scanner=null,running=false,starting=false,accepted=false,stopping=false;
 function setStatus(message,type=''){statusEl.textContent=message;statusEl.className=type;}
 function parseBadge(raw){
@@ -72,12 +111,13 @@ async function scanned(decodedText){
   accepted=true;
   for(const key of ['employeeId','firstName','region','lastName'])document.getElementById(key).textContent=employee[key];
   resultEl.hidden=false;
+  badgeRead=true;loginCard.hidden=false;
   setStatus('Badge scanned successfully. Camera stopped.','ok');
   if(running)await stopCamera();
 }
 async function startCamera(){
   if(running||starting||stopping)return;
-  accepted=false;resultEl.hidden=true;
+  accepted=false;resultEl.hidden=true;clearDemo();
   if(!window.isSecureContext||!navigator.mediaDevices?.getUserMedia){setStatus('Camera requires an HTTPS website and browser permission.','error');return;}
   if(typeof Html5Qrcode==='undefined'){setStatus('Scanner library could not load. Check your connection.','error');return;}
   starting=true;startBtn.disabled=true;setStatus('Requesting camera access...');
