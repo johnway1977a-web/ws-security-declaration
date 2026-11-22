@@ -1,149 +1,39 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>WS Badge Scanner — V3 Demo Login</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>WS Security Declaration — Pilot</title>
 <style>
-  :root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#172338;background:#f3f6fa}
-  *{box-sizing:border-box}body{margin:0;padding:24px 14px}main{max-width:600px;margin:auto}
-  h1{font-size:1.5rem;margin:0 0 8px}.note{color:#536273;line-height:1.5}
-  .card{background:#fff;padding:18px;border:1px solid #dce4ec;border-radius:15px;margin:16px 0}
-  .buttons{display:flex;gap:10px;margin:15px 0}button{flex:1;padding:14px 12px;min-height:48px;background:#155fba;color:white;border:0;border-radius:10px;font-size:1rem;font-weight:650}
-  button:disabled{opacity:.5}button.secondary{background:#e9eef6;color:#173b65}
-  #reader{width:100%;min-height:90px;overflow:hidden;border-radius:10px;background:#edf2f8}
-  #status{padding:12px;background:#f0f4fa;border-radius:10px;line-height:1.45}
-  #status.ok{background:#e7f6ec;color:#176c3c}#status.error{background:#fff0ef;color:#a32625}
-  #result{background:#f5faf7;border:1px solid #c9ead7;border-radius:12px;padding:15px;margin-top:15px}
-  #result[hidden]{display:none}#result h2{font-size:1.1rem;margin:0 0 12px;color:#176c3c}
-  #loginCard[hidden],#granted[hidden]{display:none}
-  label{display:block;font-weight:650;margin:12px 0 7px}
-  input[type=password]{width:100%;min-height:48px;padding:12px;border:1px solid #bac8d8;border-radius:10px;font:inherit}
-  .demo{background:#fff8e8;border:1px solid #f0d99d;padding:12px;border-radius:10px;color:#654900;line-height:1.45}
-  #loginStatus{padding:10px;margin-top:10px;border-radius:9px;background:#f0f4fa}
-  #loginStatus.error{background:#fff0ef;color:#a32625}
-  #granted{background:#e7f6ec;border:1px solid #a2d8b8;padding:13px;border-radius:12px;margin-top:12px;color:#176c3c}
-  dl{display:grid;grid-template-columns:110px 1fr;gap:11px;margin:0}dt{color:#566273}dd{margin:0;font-weight:650;overflow-wrap:anywhere}
-</style>
-<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" defer></script>
-</head>
-<body>
-<main>
-  <h1>WestJet Badge Scanner — V3 Test Login</h1>
-  <p class="demo"><strong>PUBLIC DEMONSTRATION ONLY.</strong> Your badge QR will be decoded locally. The test password is not real authentication. Do not use actual passwords or RAIC information.</p>
-  <section class="card">
-    <p class="note">Tap <strong>Start camera</strong>. Keep your badge in its sleeve, tilt it slightly to avoid glare, and hold the QR code steady about 10–20 cm from the phone. Move closer or farther if blurry.</p>
-    <div class="buttons"><button id="start" type="button">Start camera</button><button id="stop" class="secondary" type="button" disabled>Stop camera</button></div>
-    <div id="reader"></div>
-    <p id="status" role="status" aria-live="polite">Ready to scan.</p>
-    <div id="result" hidden>
-      <h2>✓ Employee badge identified</h2>
-      <dl>
-        <dt>Employee ID</dt><dd id="employeeId"></dd>
-        <dt>First name</dt><dd id="firstName"></dd>
-        <dt>Region</dt><dd id="region"></dd>
-        <dt>Last name</dt><dd id="lastName"></dd>
-      </dl>
-    </div>
-  </section>
-  <section class="card" id="loginCard" hidden>
-    <h2>Step 2 — Test password</h2>
-    <p class="note">Badge recognized. Enter the <strong>fictional demo password</strong> below. This only tests the screen sequence; it does not verify your identity or authorize a declaration.</p>
-    <label for="demoPassword">Demo password</label>
-    <input id="demoPassword" type="password" autocomplete="off" placeholder="Enter fictional test password" />
-    <div class="buttons"><button id="checkPassword" type="button">Check demo password</button><button id="reset" type="button" class="secondary">Scan another badge</button></div>
-    <p id="loginStatus" role="status" aria-live="polite">Waiting for demo password.</p>
-    <div id="granted" hidden><strong>✓ Demo sequence complete</strong><p>Badge read + fictional password matched. No actual employee access has been granted.</p></div>
-  </section>
-  <p class="note">Privacy: Badge data is decoded locally in your browser and is not saved or sent to this website's server. The QR reader library loads from a third-party CDN. This public page has no employee database, credential service or RAIC lookup. The demonstration password is visible in the page source and is not secure.</p>
-</main>
+:root{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:#182638;background:#f3f6fa}*{box-sizing:border-box}body{margin:0;padding:20px 14px 40px}main{max-width:740px;margin:auto}.card{background:white;border:1px solid #dce4ec;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 3px 12px #1231}h1{font-size:1.48rem;margin:6px 0}h2{font-size:1.12rem;margin:0 0 12px}.hint{color:#596778;line-height:1.5;font-size:.93rem}.tag{display:inline-block;font-size:.72rem;background:#fff1cd;color:#795700;font-weight:800;padding:5px 10px;border-radius:20px}.row{display:flex;gap:10px;flex-wrap:wrap}.row>*{flex:1}button{padding:13px 15px;min-height:48px;border:0;border-radius:10px;font-weight:700;background:#145fbd;color:#fff;font-size:1rem;cursor:pointer}button.secondary{background:#e9eef6;color:#173b65}button:disabled{opacity:.46}input,select{font:inherit;width:100%;border:1px solid #bdc9d6;border-radius:9px;padding:12px;min-height:45px;background:#fff}label{font-size:.9rem;font-weight:700;display:block;margin:12px 0 6px}#reader{background:#eef2f7;width:100%;min-height:90px;border-radius:11px;overflow:hidden}.msg{padding:12px;border-radius:10px;background:#eef3fa;color:#31435b;margin:12px 0;line-height:1.45}.msg.error{background:#ffeded;color:#9b2929}.msg.ok{background:#e8f6ed;color:#16643b}section[hidden],div[hidden]{display:none!important}dl{display:grid;grid-template-columns:135px 1fr;gap:8px;margin:0}dt{color:#596778}dd{margin:0;font-weight:700;overflow-wrap:anywhere}.preview{border:2px solid #b6c8d8;border-radius:10px;padding:15px;background:#fcfdfe}.preview h3{margin:0 0 8px}.preview .watermark{color:#a33;font-weight:900;letter-spacing:.08em}.note{font-size:.85rem;color:#667383}.actions{margin-top:12px}.divider{border-top:1px solid #dae2e9;margin:14px 0}.inline{display:flex;align-items:center;gap:8px}.inline input{width:auto;min-height:auto}.num{font-variant-numeric:tabular-nums}#printArea{display:none}
+@media print{body{background:white;padding:0} main{display:none}#printArea{display:block;padding:16px;font:12pt Arial;color:#000}#printArea table{width:100%;border-collapse:collapse}#printArea td{border:1px solid #777;padding:8px}#printArea h2{font-size:18pt}#printArea .watermark{font-size:22pt;color:#555}}
+</style><script defer src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script></head><body><main>
+<header><span class="tag">PUBLIC PILOT • FICTIONAL RECORDS ONLY</span><h1>WestJet Security Declaration</h1><p class="hint">Browser-only workflow prototype. No real RAIC lookup, authentication, storage, PDF generation, or Power Automate integration. Use fictional test badges only.</p></header>
+<section class="card"><h2>1. Scan employee badge</h2><p class="hint">Uses the proven V2 rear-camera scanner. The QR format is EmployeeID,FirstName,Region,LastName. No employee ID typing.</p><div class="row"><button id="start">Start camera</button><button id="stop" class="secondary" disabled>Stop camera</button></div><div id="reader" style="margin-top:10px"></div><div id="status" class="msg" role="status" aria-live="polite">Ready. Scan a fictional test badge.</div><p class="note">For demonstration, use the fictional badge QR codes supplied with this package. Do not scan real employee badges on this public prototype.</p></section>
+<section id="personPanel" class="card" hidden><h2>2. Employee lookup (fictional)</h2><div id="personMessage" class="msg"></div><dl id="personDetails"></dl><div class="actions"><button id="restart" class="secondary" type="button">Scan another badge</button></div></section>
+<section id="formPanel" class="card" hidden><h2>3. Declaration draft</h2><div class="msg ok">Fictional badge matched. This is not authorization to perform security screening.</div>
+<label for="flight">Select a sample YYC flight</label><select id="flight"><option value="">Choose a flight…</option><option value="ca">WS DEMO101 — YYC to YVR — 10:30 — Canada</option><option value="us">WS DEMO202 — YYC to LAX — 14:20 — United States</option><option value="encore">WS DEMO303 — YYC to YEG — 16:00 — Canada (Encore)</option></select>
+<div id="flightMeta" class="msg" hidden></div><div class="row"><div><label for="sealStart">First seal number (test numeric)</label><input id="sealStart" type="text" inputmode="numeric" maxlength="15" placeholder="e.g. 12345"></div><div><label for="sealCount">Quantity of seals</label><select id="sealCount"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option></select></div></div>
+<label for="inspectionTime">Security inspection time (test)</label><input id="inspectionTime" type="time"><div class="inline" style="margin-top:14px"><input id="ack" type="checkbox"><label for="ack" style="margin:0">I confirm this is a demonstration only, not an actual security inspection.</label></div><div class="actions"><button id="makePreview">Create test preview</button></div><div id="formError" class="msg error" hidden></div></section>
+<section id="previewPanel" class="card" hidden><h2>4. Test declaration preview</h2><div id="preview" class="preview"></div><p class="hint">The Print button uses your browser's print dialog for a <strong>fictional demonstration</strong>. It does not save a PDF to SharePoint or generate the official WestJet form.</p><div class="row"><button id="print">Print test preview</button><button id="reset" class="secondary">Start new test</button></div></section>
+<section class="card"><strong>Deployment boundary</strong><p class="hint">This public GitHub Pages prototype contains only fictional employee and flight records. Badge recognition is local. No Google Sheet or Power Automate connection is active. Real employee/RAIC records and official declarations require an IT/Security-approved backend with authorization and audit controls. The security codes, exact WestJet PDF layout and printing integration are not yet configured.</p></section>
+</main><div id="printArea"></div>
 <script>
-const startBtn=document.getElementById('start');
-const stopBtn=document.getElementById('stop');
-const statusEl=document.getElementById('status');
-const resultEl=document.getElementById('result');
-const loginCard=document.getElementById('loginCard');
-const demoPasswordEl=document.getElementById('demoPassword');
-const loginStatusEl=document.getElementById('loginStatus');
-const grantedEl=document.getElementById('granted');
-// Public demonstration only: a common fictional password, NOT an authentication secret.
-const DEMO_PASSWORD='WS-Demo-2026!';
-let badgeRead=false;
-function clearDemo(){badgeRead=false;loginCard.hidden=true;demoPasswordEl.value='';grantedEl.hidden=true;loginStatusEl.textContent='Waiting for demo password.';loginStatusEl.className='';}
-document.getElementById('checkPassword').addEventListener('click',()=>{
-  if(!badgeRead)return;
-  if(demoPasswordEl.value===DEMO_PASSWORD){
-    grantedEl.hidden=false;
-    loginStatusEl.textContent='Demo password accepted (simulation only).';
-    loginStatusEl.className='';
-  }else{
-    grantedEl.hidden=true;
-    demoPasswordEl.value='';
-    loginStatusEl.textContent='Demo password did not match.';
-    loginStatusEl.className='error';
-  }
+'use strict';
+// Fictional demonstration records only. Never add real RAIC or employee data to public source.
+const roster=Object.freeze({
+ '000999001':{firstName:'JANE',lastName:'SAMPLE',region:'NA.',department:'Final Assembly',raic:'TEST-RAIC-001'},
+ '000999002':{firstName:'ALEX',lastName:'SAMPLE',region:'NA.',department:'Commissary',raic:'TEST-RAIC-002'}
 });
-demoPasswordEl.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('checkPassword').click();});
-document.getElementById('reset').addEventListener('click',()=>startCamera());
-let scanner=null,running=false,starting=false,accepted=false,stopping=false;
-function setStatus(message,type=''){statusEl.textContent=message;statusEl.className=type;}
-function parseBadge(raw){
-  const fields=String(raw).trim().split(',').map(x=>x.trim());
-  if(fields.length<4||fields.length>5||(fields.length===5&&fields[4]!==''))throw Error('Unexpected badge format');
-  const [employeeId,firstName,region,lastName]=fields;
-  if(!/^\d{1,20}$/.test(employeeId)||!firstName||!region||!lastName)throw Error('Incomplete badge');
-  if([firstName,region,lastName].some(x=>x.length>100))throw Error('Invalid field length');
-  return {employeeId,firstName,region,lastName};
-}
-async function stopCamera(){
-  if(stopping)return;
-  stopping=true;
-  try{
-    if(scanner&&running)await scanner.stop();
-    if(scanner){try{scanner.clear();}catch(_){}}
-  }catch(e){setStatus('Could not stop camera: '+String(e),'error');}
-  finally{scanner=null;running=false;starting=false;stopping=false;startBtn.disabled=false;stopBtn.disabled=true;}
-}
-async function scanned(decodedText){
-  if(accepted)return;
-  let employee;
-  try{employee=parseBadge(decodedText);}catch(_){setStatus('QR detected, but not an expected employee badge.');return;}
-  accepted=true;
-  for(const key of ['employeeId','firstName','region','lastName'])document.getElementById(key).textContent=employee[key];
-  resultEl.hidden=false;
-  badgeRead=true;loginCard.hidden=false;
-  setStatus('Badge scanned successfully. Camera stopped.','ok');
-  if(running)await stopCamera();
-}
-async function startCamera(){
-  if(running||starting||stopping)return;
-  accepted=false;resultEl.hidden=true;clearDemo();
-  if(!window.isSecureContext||!navigator.mediaDevices?.getUserMedia){setStatus('Camera requires an HTTPS website and browser permission.','error');return;}
-  if(typeof Html5Qrcode==='undefined'){setStatus('Scanner library could not load. Check your connection.','error');return;}
-  starting=true;startBtn.disabled=true;setStatus('Requesting camera access...');
-  try{
-    scanner=new Html5Qrcode('reader',{formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE],verbose:false});
-    // Scan the entire camera preview rather than a small central square.
-    // Request a sharper rear-camera stream when supported; fall back to defaults.
-    try {
-      await scanner.start(
-        {facingMode:'environment'},
-        {fps:15,videoConstraints:{facingMode:'environment',width:{ideal:1280},height:{ideal:720}}},
-        scanned,()=>{}
-      );
-    } catch (highResError) {
-      try { scanner.clear(); } catch (_) {}
-      scanner=new Html5Qrcode('reader',{formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE],verbose:false});
-      await scanner.start({facingMode:'environment'},{fps:15},scanned,()=>{});
-    }
-    running=true;stopBtn.disabled=false;
-    if(accepted)await stopCamera();else setStatus('Camera ready. Keep the QR code steady and tilt the badge to reduce reflections.');
-  }catch(e){setStatus('Camera could not start: '+String(e),'error');await stopCamera();}
-  finally{starting=false;if(!running)startBtn.disabled=false;}
-}
-startBtn.addEventListener('click',startCamera);
-stopBtn.addEventListener('click',()=>{if(!accepted)setStatus('Camera stopped.');stopCamera();});
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&running)stopCamera();});
-</script>
-</body>
-</html>
+const flights={ca:{flight:'WS DEMO101',dest:'YVR',time:'10:30',country:'Canada',encore:false},us:{flight:'WS DEMO202',dest:'LAX',time:'14:20',country:'United States',encore:false},encore:{flight:'WS DEMO303',dest:'YEG',time:'16:00',country:'Canada',encore:true}};
+const $=x=>document.getElementById(x);let scanner=null,running=false,starting=false,stopping=false,accepted=false,person=null,previewRecord=null;
+function status(t,k=''){ $('status').textContent=t;$('status').className='msg '+k; }
+function parseBadge(raw){const a=String(raw).trim().split(',').map(x=>x.trim());if(!(a.length===4||(a.length===5&&a[4]==='')))throw Error('Unexpected badge format');const [employeeId,firstName,region,lastName]=a;if(!/^\d{1,20}$/.test(employeeId)||!firstName||!region||!lastName)throw Error('Invalid badge');return {employeeId,firstName,region,lastName};}
+function el(tag,txt){const x=document.createElement(tag);x.textContent=txt;return x;}
+function showPerson(badge){person=null;$('personPanel').hidden=false;$('formPanel').hidden=true;$('previewPanel').hidden=true;const r=roster[badge.employeeId];$('personDetails').replaceChildren();if(!r || [r.firstName,r.lastName,r.region].some((x,i)=>x.toUpperCase()!==[badge.firstName,badge.lastName,badge.region][i].toUpperCase())){$('personMessage').className='msg error';$('personMessage').textContent='Not found or badge details do not match the fictional test roster. Access to the next demo screen is blocked.';return;}
+person={...r,employeeId:badge.employeeId};$('personMessage').className='msg ok';$('personMessage').textContent='Test record matched (simulation only).';for(const [title,value] of [['Employee',r.firstName+' '+r.lastName],['Department',r.department],['Test RAIC',r.raic],['Record',badge.employeeId]]){$('personDetails').append(el('dt',title),el('dd',value));}$('formPanel').hidden=false;}
+async function stopCamera(){if(stopping)return;stopping=true;try{if(scanner&&running)await scanner.stop();if(scanner)try{scanner.clear()}catch(_){}}catch(e){status('Could not stop camera: '+String(e),'error')}finally{scanner=null;running=false;starting=false;stopping=false;$('start').disabled=false;$('stop').disabled=true;}}
+async function onScan(text){if(accepted)return;let b;try{b=parseBadge(text)}catch(_){status('QR detected, but not the expected employee badge format.');return;}accepted=true;status('QR scanned. Checking fictional roster…','ok');showPerson(b);if(running)await stopCamera();}
+async function startCamera(){if(running||starting||stopping)return;accepted=false;person=null;$('personPanel').hidden=true;$('formPanel').hidden=true;$('previewPanel').hidden=true;if(!window.isSecureContext||!navigator.mediaDevices?.getUserMedia){status('Camera requires HTTPS and browser camera permission.','error');return}if(typeof Html5Qrcode==='undefined'){status('QR reader library unavailable. Check connection.','error');return}starting=true;$('start').disabled=true;status('Requesting camera…');try{scanner=new Html5Qrcode('reader',{formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE],verbose:false});try{await scanner.start({facingMode:'environment'},{fps:15,videoConstraints:{facingMode:'environment',width:{ideal:1280},height:{ideal:720}}},onScan,()=>{});}catch(e){try{scanner.clear()}catch(_){}scanner=new Html5Qrcode('reader',{formatsToSupport:[Html5QrcodeSupportedFormats.QR_CODE],verbose:false});await scanner.start({facingMode:'environment'},{fps:15},onScan,()=>{});}running=true;$('stop').disabled=false;if(accepted)await stopCamera();else status('Camera ready. Scan a fictional test badge.');}catch(e){status('Camera could not start: '+String(e),'error');await stopCamera()}finally{starting=false;if(!running)$('start').disabled=false;}}
+function updateFlight(){const f=flights[$('flight').value];$('flightMeta').hidden=!f;if(f)$('flightMeta').textContent='Destination '+f.dest+' • '+f.country+' • Departure '+f.time+(f.encore?' • Encore demonstration':'');$('previewPanel').hidden=true;}
+function seals(start,n){if(!/^\d{1,15}$/.test(start))throw Error('Enter a numeric test seal number.');const out=[],len=start.length;let cur=BigInt(start);for(let i=0;i<n;i++)out.push((cur+BigInt(i)).toString().padStart(len,'0'));return out;}
+function makePreview(){if(!person)return;const f=flights[$('flight').value];const failure=$('formError');failure.hidden=true;try{if(!f)throw Error('Choose a sample flight.');if(!$('inspectionTime').value)throw Error('Enter a test inspection time.');if(!$('ack').checked)throw Error('Confirm this is only a demonstration.');const nums=seals($('sealStart').value,Number($('sealCount').value));previewRecord={name:person.firstName+' '+person.lastName,department:person.department,testRaic:person.raic,flight:f.flight,dest:f.dest,country:f.country,departure:f.time,inspection:$('inspectionTime').value,screening:f.country==='Canada'?$('inspectionTime').value:'Not auto-filled (US rule requires review)',transportTime:f.country==='United States'?'BLANK — US destination':'Not automatically set in pilot',t4:f.encore&&person.department==='Commissary'?'T4 circled (pilot)':'Not circled',seals:nums.join(', ')};buildPreview(previewRecord);$('previewPanel').hidden=false;$('previewPanel').scrollIntoView({behavior:'smooth',block:'start'});}catch(e){failure.hidden=false;failure.textContent=e.message;}}
+function buildPreview(r){const wrapper=$('preview');wrapper.replaceChildren(el('div','TEST DOCUMENT • NOT VALID FOR OPERATIONS'),el('h3','WestJet Security Declaration — simulated preview'));const table=document.createElement('table');for(const [key,val] of Object.entries(r)){const tr=document.createElement('tr');tr.append(el('td',key.replace(/([A-Z])/g,' $1').trim()),el('td',val));table.appendChild(tr);}wrapper.appendChild(table);const printable=$('printArea');printable.replaceChildren(el('div','SAMPLE ONLY — NOT AN OFFICIAL SECURITY DECLARATION'),el('h2','WestJet Security Declaration — TEST PREVIEW'));printable.appendChild(table.cloneNode(true));}
+$('start').addEventListener('click',startCamera);$('stop').addEventListener('click',()=>{if(!accepted)status('Camera stopped.');stopCamera();});$('restart').addEventListener('click',startCamera);$('reset').addEventListener('click',()=>{previewRecord=null;$('flight').value='';$('sealStart').value='';$('sealCount').value='1';$('ack').checked=false;startCamera();});$('flight').addEventListener('change',updateFlight);$('makePreview').addEventListener('click',makePreview);$('print').addEventListener('click',()=>{if(previewRecord)window.print()});document.addEventListener('visibilitychange',()=>{if(document.hidden&&running)stopCamera()});
+</script></body></html>
