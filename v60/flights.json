@@ -1,6 +1,1143 @@
 {
-  "updated_at": null,
-  "source": "fictional_demo",
-  "demo": true,
-  "flights": []
+  "updated_at": "2026-11-26T01:50:50Z",
+  "source": "LimeFlight active release 2026-11-26, LimeFlight_YYC_Departures_2026-11-25_UTC.xlsx",
+  "demo": false,
+  "flights": [
+    {
+      "flight": "WS620",
+      "from": "YYC",
+      "to": "YYZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T00:05:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS746",
+      "from": "YYC",
+      "to": "YXU",
+      "operator": "WJA",
+      "departure": "2026-11-25T00:50:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1992",
+      "from": "YYC",
+      "to": "ATL",
+      "operator": "WJA",
+      "departure": "2026-11-25T01:25:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3540",
+      "from": "YYC",
+      "to": "YMM",
+      "operator": "WEN",
+      "departure": "2026-11-25T06:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS650",
+      "from": "YYC",
+      "to": "YYZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T06:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS4022",
+      "from": "YYC",
+      "to": "YFI",
+      "operator": "WJA",
+      "departure": "2026-11-25T06:25:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS4080",
+      "from": "YYC",
+      "to": "YFI",
+      "operator": "WEN",
+      "departure": "2026-11-25T06:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2250",
+      "from": "YYC",
+      "to": "PVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T07:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3300",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WEN",
+      "departure": "2026-11-25T07:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS101",
+      "from": "YYC",
+      "to": "YYC",
+      "operator": "WJA",
+      "departure": "2026-11-25T07:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS222",
+      "from": "YYC",
+      "to": "YWG",
+      "operator": "WJA",
+      "departure": "2026-11-25T08:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3462",
+      "from": "YYC",
+      "to": "YXE",
+      "operator": "WEN",
+      "departure": "2026-11-25T08:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3360",
+      "from": "YYC",
+      "to": "YQR",
+      "operator": "WEN",
+      "departure": "2026-11-25T08:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS105",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T08:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS636",
+      "from": "YYC",
+      "to": "YYZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T08:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3679",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WEN",
+      "departure": "2026-11-25T08:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3530",
+      "from": "YYC",
+      "to": "YMM",
+      "operator": "WEN",
+      "departure": "2026-11-25T08:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3615",
+      "from": "YYC",
+      "to": "YQU",
+      "operator": "WEN",
+      "departure": "2026-11-25T08:20:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2378",
+      "from": "YYC",
+      "to": "HUX",
+      "operator": "WJA",
+      "departure": "2026-11-25T08:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2394",
+      "from": "YYC",
+      "to": "MZT",
+      "operator": "WJA",
+      "departure": "2026-11-25T08:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2200",
+      "from": "YYC",
+      "to": "CUN",
+      "operator": "WJA",
+      "departure": "2026-11-25T08:40:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1590",
+      "from": "YYC",
+      "to": "ATL",
+      "operator": "WJA",
+      "departure": "2026-11-25T08:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS271",
+      "from": "YYC",
+      "to": "YYJ",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS515",
+      "from": "YYC",
+      "to": "YQQ",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3733",
+      "from": "YYC",
+      "to": "YCD",
+      "operator": "WEN",
+      "departure": "2026-11-25T09:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS228",
+      "from": "YYC",
+      "to": "YWG",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS392",
+      "from": "YYC",
+      "to": "YQR",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS103",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS632",
+      "from": "YYC",
+      "to": "YYZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3397",
+      "from": "YYC",
+      "to": "YYF",
+      "operator": "WEN",
+      "departure": "2026-11-25T09:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3464",
+      "from": "YYC",
+      "to": "YXE",
+      "operator": "WEN",
+      "departure": "2026-11-25T09:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS668",
+      "from": "YYC",
+      "to": "YHZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:20:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS473",
+      "from": "YYC",
+      "to": "YXX",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:25:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS181",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS558",
+      "from": "YYC",
+      "to": "YUL",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2284",
+      "from": "YYC",
+      "to": "SJD",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2206",
+      "from": "YYC",
+      "to": "CUN",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS610",
+      "from": "YYC",
+      "to": "YOW",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3595",
+      "from": "YYC",
+      "to": "YXS",
+      "operator": "WEN",
+      "departure": "2026-11-25T09:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3483",
+      "from": "YYC",
+      "to": "YKA",
+      "operator": "WEN",
+      "departure": "2026-11-25T09:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS170",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:50:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1160",
+      "from": "YYC",
+      "to": "PHX",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:50:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1020",
+      "from": "YYC",
+      "to": "LAX",
+      "operator": "WJA",
+      "departure": "2026-11-25T09:50:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2382",
+      "from": "YYC",
+      "to": "ZIH",
+      "operator": "WJA",
+      "departure": "2026-11-25T10:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1410",
+      "from": "YYC",
+      "to": "MCO",
+      "operator": "WJA",
+      "departure": "2026-11-25T10:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1086",
+      "from": "YYC",
+      "to": "LAS",
+      "operator": "WJA",
+      "departure": "2026-11-25T10:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1680",
+      "from": "YYC",
+      "to": "JFK",
+      "operator": "WJA",
+      "departure": "2026-11-25T10:50:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS685",
+      "from": "YYC",
+      "to": "YZF",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS634",
+      "from": "YYC",
+      "to": "YYZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3362",
+      "from": "YYC",
+      "to": "YQR",
+      "operator": "WEN",
+      "departure": "2026-11-25T11:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3304",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WEN",
+      "departure": "2026-11-25T11:05:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3677",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WEN",
+      "departure": "2026-11-25T11:05:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS283",
+      "from": "YYC",
+      "to": "YYJ",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3466",
+      "from": "YYC",
+      "to": "YXE",
+      "operator": "WEN",
+      "departure": "2026-11-25T11:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS234",
+      "from": "YYC",
+      "to": "YWG",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3725",
+      "from": "YYC",
+      "to": "YXJ",
+      "operator": "WEN",
+      "departure": "2026-11-25T11:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2282",
+      "from": "YYC",
+      "to": "SJD",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS115",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2242",
+      "from": "YYC",
+      "to": "PVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1482",
+      "from": "YYC",
+      "to": "SAN",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1460",
+      "from": "YYC",
+      "to": "PSP",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:35:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2210",
+      "from": "YYC",
+      "to": "CUN",
+      "operator": "WJA",
+      "departure": "2026-11-25T11:35:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3534",
+      "from": "YYC",
+      "to": "YMM",
+      "operator": "WEN",
+      "departure": "2026-11-25T11:50:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS113",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T12:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1630",
+      "from": "YYC",
+      "to": "FLL",
+      "operator": "WJA",
+      "departure": "2026-11-25T12:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3681",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WEN",
+      "departure": "2026-11-25T12:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS125",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T13:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1552",
+      "from": "YYC",
+      "to": "SEA",
+      "operator": "WJA",
+      "departure": "2026-11-25T13:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3640",
+      "from": "YYC",
+      "to": "YBR",
+      "operator": "WEN",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3269",
+      "from": "YYC",
+      "to": "YXX",
+      "operator": "WEN",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3364",
+      "from": "YYC",
+      "to": "YQR",
+      "operator": "WEN",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS277",
+      "from": "YYC",
+      "to": "YYJ",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS178",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3532",
+      "from": "YYC",
+      "to": "YMM",
+      "operator": "WEN",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS358",
+      "from": "YYC",
+      "to": "YXE",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3685",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WEN",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3621",
+      "from": "YYC",
+      "to": "YQU",
+      "operator": "WEN",
+      "departure": "2026-11-25T14:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS238",
+      "from": "YYC",
+      "to": "YWG",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3485",
+      "from": "YYC",
+      "to": "YKA",
+      "operator": "WEN",
+      "departure": "2026-11-25T14:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS117",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS640",
+      "from": "YYC",
+      "to": "YYZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:25:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1462",
+      "from": "YYC",
+      "to": "PSP",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS80",
+      "from": "YYC",
+      "to": "NRT",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1022",
+      "from": "YYC",
+      "to": "LAX",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1164",
+      "from": "YYC",
+      "to": "PHX",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1090",
+      "from": "YYC",
+      "to": "LAS",
+      "operator": "WJA",
+      "departure": "2026-11-25T14:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3687",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WEN",
+      "departure": "2026-11-25T15:05:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS121",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T16:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3727",
+      "from": "YYC",
+      "to": "YXJ",
+      "operator": "WEN",
+      "departure": "2026-11-25T16:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3683",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WEN",
+      "departure": "2026-11-25T17:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3366",
+      "from": "YYC",
+      "to": "YQR",
+      "operator": "WEN",
+      "departure": "2026-11-25T17:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3470",
+      "from": "YYC",
+      "to": "YXE",
+      "operator": "WEN",
+      "departure": "2026-11-25T17:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS648",
+      "from": "YYC",
+      "to": "YYZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T17:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3271",
+      "from": "YYC",
+      "to": "YXX",
+      "operator": "WEN",
+      "departure": "2026-11-25T17:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS123",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T17:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS242",
+      "from": "YYC",
+      "to": "YWG",
+      "operator": "WJA",
+      "departure": "2026-11-25T17:35:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS4088",
+      "from": "YYC",
+      "to": "YFI",
+      "operator": "WEN",
+      "departure": "2026-11-25T17:40:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1540",
+      "from": "YYC",
+      "to": "IAH",
+      "operator": "WJA",
+      "departure": "2026-11-25T18:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS4032",
+      "from": "YYC",
+      "to": "YFI",
+      "operator": "WJA",
+      "departure": "2026-11-25T18:05:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3312",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WEN",
+      "departure": "2026-11-25T18:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS614",
+      "from": "YYC",
+      "to": "YOW",
+      "operator": "WJA",
+      "departure": "2026-11-25T18:40:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS119",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T18:40:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3368",
+      "from": "YYC",
+      "to": "YQR",
+      "operator": "WEN",
+      "departure": "2026-11-25T19:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3623",
+      "from": "YYC",
+      "to": "YQU",
+      "operator": "WEN",
+      "departure": "2026-11-25T19:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS287",
+      "from": "YYC",
+      "to": "YYJ",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS654",
+      "from": "YYC",
+      "to": "YYZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3273",
+      "from": "YYC",
+      "to": "YXX",
+      "operator": "WEN",
+      "departure": "2026-11-25T19:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3536",
+      "from": "YYC",
+      "to": "YMM",
+      "operator": "WEN",
+      "departure": "2026-11-25T19:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2228",
+      "from": "YYC",
+      "to": "MEX",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:05:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS127",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS185",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS174",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:15:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS364",
+      "from": "YYC",
+      "to": "YXE",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:20:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS10",
+      "from": "YYC",
+      "to": "CDG",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:30:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1088",
+      "from": "YYC",
+      "to": "LAS",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS248",
+      "from": "YYC",
+      "to": "YWG",
+      "operator": "WJA",
+      "departure": "2026-11-25T19:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS1166",
+      "from": "YYC",
+      "to": "PHX",
+      "operator": "WJA",
+      "departure": "2026-11-25T20:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3308",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WEN",
+      "departure": "2026-11-25T20:20:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS131",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T21:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS187",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WJA",
+      "departure": "2026-11-25T22:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3370",
+      "from": "YYC",
+      "to": "YQR",
+      "operator": "WEN",
+      "departure": "2026-11-25T22:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS252",
+      "from": "YYC",
+      "to": "YWG",
+      "operator": "WJA",
+      "departure": "2026-11-25T22:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS172",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WJA",
+      "departure": "2026-11-25T22:05:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS368",
+      "from": "YYC",
+      "to": "YXE",
+      "operator": "WJA",
+      "departure": "2026-11-25T22:05:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2",
+      "from": "YYC",
+      "to": "LHR",
+      "operator": "WJA",
+      "departure": "2026-11-25T22:10:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS670",
+      "from": "YYC",
+      "to": "YHZ",
+      "operator": "WJA",
+      "departure": "2026-11-25T22:40:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS267",
+      "from": "YYC",
+      "to": "YYJ",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:00:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3611",
+      "from": "YYC",
+      "to": "YQU",
+      "operator": "WEN",
+      "departure": "2026-11-25T23:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3487",
+      "from": "YYC",
+      "to": "YKA",
+      "operator": "WEN",
+      "departure": "2026-11-25T23:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS378",
+      "from": "YYC",
+      "to": "YXE",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2266",
+      "from": "YYC",
+      "to": "PTY",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3538",
+      "from": "YYC",
+      "to": "YMM",
+      "operator": "WEN",
+      "departure": "2026-11-25T23:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS176",
+      "from": "YYC",
+      "to": "YEG",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:45:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS517",
+      "from": "YYC",
+      "to": "YQQ",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:50:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS394",
+      "from": "YYC",
+      "to": "YQR",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:50:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3277",
+      "from": "YYC",
+      "to": "YXX",
+      "operator": "WEN",
+      "departure": "2026-11-25T23:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3739",
+      "from": "YYC",
+      "to": "YCD",
+      "operator": "WEN",
+      "departure": "2026-11-25T23:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS189",
+      "from": "YYC",
+      "to": "YLW",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS3547",
+      "from": "YYC",
+      "to": "YXC",
+      "operator": "WEN",
+      "departure": "2026-11-25T23:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS760",
+      "from": "YYC",
+      "to": "YYT",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS137",
+      "from": "YYC",
+      "to": "YVR",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:55:00-07:00",
+      "status": "unknown"
+    },
+    {
+      "flight": "WS2260",
+      "from": "YYC",
+      "to": "LIR",
+      "operator": "WJA",
+      "departure": "2026-11-25T23:55:00-07:00",
+      "status": "unknown"
+    }
+  ]
 }
